@@ -1,0 +1,89 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+}
+
+.markdown h1 {
+  @apply text-4xl mt-16 mb-6 font-bold leading-snug;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown h4 {
+  @apply text-xl mt-6 mb-4 leading-snug;
+}
+
+.markdown ul {
+  @apply list-disc pl-8;
+}
+
+.markdown ol {
+  @apply list-decimal pl-8;
+}
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-700;
+}
+
+.markdown a {
+  @apply text-blue-600 underline hover:text-blue-800;
+}
+
+.markdown pre {
+  @apply bg-gray-100 p-4 rounded-lg overflow-x-auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.markdown code {
+  @apply bg-gray-200 px-2 py-1 rounded text-sm font-mono;
+}
+
+.markdown table {
+  @apply w-full border-collapse border border-gray-300 my-6;
+  table-layout: auto;
+}
+
+.markdown th,
+.markdown td {
+  @apply border border-gray-300 px-4 py-2 text-left;
+}
+
+.markdown th {
+  @apply bg-gray-100 font-bold text-gray-800;
+}
+
+.markdown td {
+  @apply text-gray-700;
+}
+
+.markdown table thead {
+  @apply bg-gray-200;
+}
+
+.markdown img {
+  @apply max-w-full h-auto my-6;
+}
+
+.markdown hr {
+  @apply border-t border-gray-300 my-8;
+}
+
+.markdown strong {
+  @apply font-bold;
+}
+
+.markdown em {
+  @apply italic;
+}
