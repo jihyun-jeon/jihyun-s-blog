@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/app/components/shared/Header";
+import Header from "@/components/shared/Header";
 
 const Layout = (props) => {
   return (

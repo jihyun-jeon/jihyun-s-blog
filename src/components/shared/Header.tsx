@@ -37,7 +37,6 @@ function Header() {
           </li>
         ))}
 
-        <li>검색</li>
         <ThemeProvider />
       </ul>
     </nav>

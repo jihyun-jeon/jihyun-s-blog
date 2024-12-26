@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import ThemeProvider from "./components/ThemeProvider";
+import "../css/globals.css";
+import Header from "../components/shared/Header";
 
 export const metadata: Metadata = {
   title: "blog",
@@ -15,7 +15,13 @@ export default async function RootLayout({
   return (
     <html lang="ko">
       <body className="bg-white text-black dark:bg-black dark:text-white">
-        <main>{children}</main>
+        <main>
+          <Header />
+          <div className="container mx-auto px-5 mb-10">
+            <h2>COMMON_LAYOUT!</h2>
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
