@@ -17,7 +17,7 @@ export default async function RootLayout({
       <body className="bg-white text-black dark:bg-black dark:text-white">
         <main>
           <Header />
-          <div className="container mx-auto px-5 mb-10">
+          <div className="container mx-auto px-5 pt-16 mb-10">
             <h2>COMMON_LAYOUT!</h2>
             {children}
           </div>
