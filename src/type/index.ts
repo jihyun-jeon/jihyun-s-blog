@@ -2,6 +2,7 @@ export type PostType = {
   slug: string;
   title: string;
   date: string;
+  category: string;
   coverImage: string;
   author: { name: string; picture: string };
   excerpt: string;
