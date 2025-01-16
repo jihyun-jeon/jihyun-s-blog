@@ -7,19 +7,19 @@ import ThemeProvider from "../ThemeProvider";
 type MenuItem = {
   name: string;
   href: string;
+  activePattern: RegExp;
 };
 
 const MENU_ITMES: MenuItem[] = [
-  { name: "Blog", href: "/" },
-  { name: "Project", href: "/project" },
-  { name: "About", href: "/about" },
+  { name: "Blog", href: "/", activePattern: /^(\/|\/category\/[^/]+)$/ },
+  { name: "About", href: "/about", activePattern: /^\/about$/ },
 ];
 
 function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full h-16 bg-gray-100 px-10 flex items-center justify-between dark:bg-slate-600 dark:text-white">
+    <nav className="fixed w-full h-16  bg-gray-100 px-10 flex items-center justify-between dark:bg-slate-600 dark:text-white">
       <div className="flex justify-center align-middle">
         <Link href="/" className="mr-10">
           <h1>JIHYUN</h1>
@@ -31,7 +31,9 @@ function Header() {
         {MENU_ITMES.map((item) => (
           <li
             key={item.href}
-            className={pathname === item.href ? "text-cyan-200" : ""}
+            className={
+              pathname.match(item.activePattern) ? "text-cyan-200" : ""
+            }
           >
             <Link href={item.href}>{item.name}</Link>
           </li>
