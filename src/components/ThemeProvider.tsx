@@ -4,15 +4,15 @@ import { useEffect, useState } from "react";
 import { ThemeProvider as NextThemeProvider } from "next-themes";
 type ThemeProviderProps = React.ComponentProps<typeof NextThemeProvider>;
 
-export function ThemeProvider({ childeren, ...props }: ThemeProviderProps) {
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
 
   if (!mounted) {
-    return <>{childeren}</>;
+    return <>{children}</>;
   }
 
-  return <NextThemeProvider {...props}>{childeren}</NextThemeProvider>;
+  return <NextThemeProvider {...props}>{children}</NextThemeProvider>;
 }
