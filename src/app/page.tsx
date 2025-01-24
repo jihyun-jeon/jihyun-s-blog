@@ -7,7 +7,6 @@ import { posts } from "../../posts";
 export default function Home() {
   return (
     <div>
-      <Header />
       {/* hero */}
       <div className="mb-20 px-5 md:px-0">
         <div className="h-[250px] md:h-[600px] rounded-md relative">
@@ -52,7 +51,6 @@ export default function Home() {
           </Link>
         ))}
       </div>
-      <Footer />
     </div>
   );
 }

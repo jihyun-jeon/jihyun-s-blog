@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Headers from "@/components/Headers";
+import Footer from "@/components/Footer";
 
 const work_Sans = Work_Sans({
   subsets: ["latin"],
@@ -28,7 +30,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Headers />
+          <div className="mt-32">{children} </div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

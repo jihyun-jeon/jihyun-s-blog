@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between items-center py-9 px-5 md:px-0">
+    <header className="fixed top-0 z-10 left-0 w-full flex justify-between items-center py-9 px-5   bg-amber-400">
       <Link href={"/"} className="flex space-x-2 items-center">
         <Image
           src={theme === "light" ? "/light-union.svg" : "/dark-union.svg"}
